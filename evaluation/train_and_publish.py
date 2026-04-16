@@ -19,6 +19,7 @@ Usage:
 import argparse
 import json
 import os
+import random
 
 import numpy as np
 import tinker
@@ -76,19 +77,20 @@ NVIDIA_NUM = 10_000
 OPENAI_NUM = 10_000
 ALLENAI_NUM = 10_000
 
-NVIDIA_CONVERSATIONS = datafile.sample_from_jsonl("nvidia.jsonl", NVIDIA_NUM)
-OPENAI_CONVERSATIONS = datafile.sample_from_jsonl("openai.jsonl", OPENAI_NUM)
-ALLENAI_CONVERSATIONS = datafile.sample_from_jsonl("allenai.jsonl", ALLEN_NUM)
+NVIDIA_CONVERSATIONS = datafile.sample_from_jsonl("evaluation/data/nvidia.jsonl", NVIDIA_NUM)
+OPENAI_CONVERSATIONS = datafile.sample_from_jsonl("evaluation/data/openai.jsonl", OPENAI_NUM)
+ALLENAI_CONVERSATIONS = datafile.sample_from_jsonl("evaluation/data/allenai.jsonl", ALLENAI_NUM)
 
 ALL_CONVERSATIONS = NVIDIA_CONVERSATIONS + OPENAI_CONVERSATIONS + ALLENAI_CONVERSATIONS
 
 #optional metaMath
 #METAMATH_NUM = 10_000
-#METAMATH_CONVERSATIONS = datafile.sample_from_jsonl("metamath.jsonl", METAMATH_NUM)
+#METAMATH_CONVERSATIONS = datafile.sample_from_jsonl("data/metamath.jsonl", METAMATH_NUM)
 #ALL_CONVERSATIONS = ALL_CONVERSATIONS + METAMATH_CONVERSATIONS
 
 
 random.shuffle(ALL_CONVERSATIONS)
+
 
 def main():
     parser = argparse.ArgumentParser(description="Train, save, and publish a checkpoint")
