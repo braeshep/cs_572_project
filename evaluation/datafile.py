@@ -64,6 +64,7 @@ def sample_from_jsonl(filename, n_samples):
     Returns:
         List of conversations
     """
+    print(f"Sampling Data from {filename}")
     print("finding length")
     with open(filename, "r", encoding="utf-8") as f:
         total_lines = sum(1 for _ in f)
