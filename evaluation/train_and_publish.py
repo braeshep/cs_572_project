@@ -119,21 +119,21 @@ def main():
     # Prepare training data
     print("Preparing training data...")
     all_data = []
-    for convo in DEMO_CONVERSATIONS:
+    for convo in NVIDIA_CONVERSATIONS:
         datum = conversation_to_datum(
             convo, renderer, max_length=512, train_on_what=renderers.TrainOnWhat.ALL_ASSISTANT_MESSAGES
         )
         all_data.append(datum)
     print(f"  {len(all_data)} training examples prepared")
     
-    '''
+    
     random.shuffle(all_data)
     split_idx = int(0.8 * len(all_data))
     train_data = all_data[:split_idx]
     val_data = all_data[split_idx:]
     print()
     print(f"Train: {len(train_data)}, Val: {len(val_data)}")
-    '''
+    
 
     # Create training client
     print(f"Creating LoRA training client (rank={args.rank})...")
@@ -141,20 +141,20 @@ def main():
     tc = sc.create_lora_training_client(base_model=MODEL, rank=args.rank)
     print("  Training client ready")
     
-    '''
+    
     # Early Soppping Setup
     best_val_loss = float("inf")
     patience = 2
     patience_counter = 0
     best_checkpoint_path = None
-    '''
+    
 
     # Train
     adam_params = types.AdamParams(learning_rate=args.lr, beta1=0.9, beta2=0.95, eps=1e-8)
     print(f"\nTraining for {args.num_steps} steps (batch_size={args.batch_size}, lr={args.lr})...")
 
     for step in range(args.num_steps):
-        '''
+        
         start = (step * args.batch_size) % len(train_data)
         batch = [train_data[i % len(train_data)] for i in range(start, start + args.batch_size)]
 
@@ -239,13 +239,13 @@ def main():
         weights = np.concatenate([d.loss_fn_inputs["weights"].tolist() for d in batch])
         loss = -np.dot(logprobs, weights) / max(weights.sum(), 1)
         print(f"  Step {step+1}/{args.num_steps} | Loss: {loss:.4f}")
-    
+        '''
 
     # Save checkpoint
     print(f"\nSaving checkpoint '{args.checkpoint_name}'...")
-    ckpt = tc.save_weights_for_sampler(name=args.checkpoint_name).result()
-    checkpoint_path = ckpt.path
-    #checkpoint_path = best_checkpoint_path
+    #ckpt = tc.save_weights_for_sampler(name=args.checkpoint_name).result()
+    #checkpoint_path = ckpt.path
+    checkpoint_path = best_checkpoint_path
     print(f"  Checkpoint saved: {checkpoint_path}")
 
     # Publish
