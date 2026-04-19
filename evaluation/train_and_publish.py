@@ -38,6 +38,7 @@ MODEL = "meta-llama/Llama-3.2-1B"    # Smaller, faster for development
 EVAL_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # TODO: TOY DATA, replace with your own training data
+
 DEMO_CONVERSATIONS = [
     [
         {"role": "user", "content": "What is 15 + 27?"},
@@ -73,24 +74,30 @@ DEMO_CONVERSATIONS = [
     ],
 ]
 
-NVIDIA_NUM = 10_000
-OPENAI_NUM = 10_000
-ALLENAI_NUM = 10_000
+NUM_SAMPLES = 100 #8192
+
+NVIDIA_NUM = NUM_SAMPLES
+OPENAI_NUM = NUM_SAMPLES
+ALLENAI_NUM = NUM_SAMPLES
 
 NVIDIA_CONVERSATIONS = datafile.sample_from_jsonl("evaluation/data/nvidia.jsonl", NVIDIA_NUM)
-OPENAI_CONVERSATIONS = datafile.sample_from_jsonl("evaluation/data/openai.jsonl", OPENAI_NUM)
-ALLENAI_CONVERSATIONS = datafile.sample_from_jsonl("evaluation/data/allenai.jsonl", ALLENAI_NUM)
+#OPENAI_CONVERSATIONS = datafile.sample_from_jsonl("evaluation/data/new_openai.jsonl", OPENAI_NUM)
+#ALLENAI_CONVERSATIONS = datafile.sample_from_jsonl("evaluation/data/new_allenai.jsonl", ALLENAI_NUM)
 
-ALL_CONVERSATIONS = NVIDIA_CONVERSATIONS + OPENAI_CONVERSATIONS + ALLENAI_CONVERSATIONS
+#ALL_CONVERSATIONS = NVIDIA_CONVERSATIONS + OPENAI_CONVERSATIONS + ALLENAI_CONVERSATIONS
 
 #optional metaMath
 #METAMATH_NUM = 10_000
-#METAMATH_CONVERSATIONS = datafile.sample_from_jsonl("data/metamath.jsonl", METAMATH_NUM)
+#METAMATH_CONVERSATIONS = datafile.sample_from_jsonl("evaluation/data/new_metamath.jsonl", METAMATH_NUM)
 #ALL_CONVERSATIONS = ALL_CONVERSATIONS + METAMATH_CONVERSATIONS
 
 
-random.shuffle(ALL_CONVERSATIONS)
+#random.shuffle(ALL_CONVERSATIONS)
 
+def compute_loss(fwd_bwd_result, batch):
+    logprobs = np.concatenate([o["logprobs"].tolist() for o in fwd_bwd_result.loss_fn_outputs])
+    weights = np.concatenate([d.loss_fn_inputs["weights"].tolist() for d in batch])
+    return -np.dot(logprobs, weights) / max(weights.sum(), 1)
 
 def main():
     parser = argparse.ArgumentParser(description="Train, save, and publish a checkpoint")
@@ -118,18 +125,105 @@ def main():
         )
         all_data.append(datum)
     print(f"  {len(all_data)} training examples prepared")
+    
+    '''
+    random.shuffle(all_data)
+    split_idx = int(0.8 * len(all_data))
+    train_data = all_data[:split_idx]
+    val_data = all_data[split_idx:]
+    print()
+    print(f"Train: {len(train_data)}, Val: {len(val_data)}")
+    '''
 
     # Create training client
     print(f"Creating LoRA training client (rank={args.rank})...")
     sc = tinker.ServiceClient()
     tc = sc.create_lora_training_client(base_model=MODEL, rank=args.rank)
     print("  Training client ready")
+    
+    '''
+    # Early Soppping Setup
+    best_val_loss = float("inf")
+    patience = 2
+    patience_counter = 0
+    best_checkpoint_path = None
+    '''
 
     # Train
     adam_params = types.AdamParams(learning_rate=args.lr, beta1=0.9, beta2=0.95, eps=1e-8)
     print(f"\nTraining for {args.num_steps} steps (batch_size={args.batch_size}, lr={args.lr})...")
 
     for step in range(args.num_steps):
+        '''
+        start = (step * args.batch_size) % len(train_data)
+        batch = [train_data[i % len(train_data)] for i in range(start, start + args.batch_size)]
+
+        fwd_bwd_result = tc.forward_backward(batch, loss_fn="cross_entropy").result()
+        tc.optim_step(adam_params).result()
+
+        train_loss = compute_loss(fwd_bwd_result, batch)
+
+        # -------------------------
+        # VALIDATION STEP
+        # -------------------------
+        val_losses = []
+        for i in range(0, len(val_data), args.batch_size):
+            val_batch = val_data[i:i + args.batch_size]
+
+            fwd_result = tc.forward_backward(val_batch, loss_fn="cross_entropy").result()
+            val_loss = compute_loss(fwd_result, val_batch)
+            val_losses.append(val_loss)
+
+        val_loss = np.mean(val_losses)
+
+        print(f"Step {step+1}/{args.num_steps} | Train Loss: {train_loss:.4f} | Val Loss: {val_loss:.4f}")
+        
+        
+        # -------------------------
+        # PERIODIC CHECKPOINT + PUBLISH (every 5 steps)
+        # -------------------------
+        if (step + 1) % 5 == 0:
+            periodic_ckpt_name = (
+                f"{args.checkpoint_name}"
+                f"_bs{args.batch_size}"
+                f"_lr{args.lr}"
+                f"_r{args.rank}"
+                f"_ns{len(train_data)}"
+                f"_step{step+1}"
+            )
+
+            periodic_ckpt = tc.save_weights_for_sampler(name=periodic_ckpt_name).result()
+            periodic_ckpt_path = ckpt.path
+            print(f"  [Checkpoint saved @ step {step+1}] -> {periodic_ckpt_path}")
+
+            # Publish immediately
+            if not args.no_publish:
+                rest_client = sc.create_rest_client()
+                rest_client.publish_checkpoint_from_tinker_path(periodic_ckpt_path).result()
+                print(f"  [Checkpoint published @ step {step+1}]")
+
+        # -------------------------
+        # EARLY STOPPING
+        # -------------------------
+        if val_loss < best_val_loss:
+            best_val_loss = val_loss
+            patience_counter = 0
+
+            # Save best checkpoint
+            ckpt = tc.save_weights_for_sampler(name=f"{args.checkpoint_name}_best").result()
+            best_checkpoint_path = ckpt.path
+            print(f"  New best checkpoint saved (val_loss={val_loss:.4f})")
+
+        else:
+            patience_counter += 1
+            print(f"  Val loss worsened ({patience_counter}/{patience})")
+
+            if patience_counter >= patience:
+                print("\nEarly stopping triggered.")
+                break
+
+        
+        '''
         # Cycle through data
         start = (step * args.batch_size) % len(all_data)
         batch = [all_data[i % len(all_data)] for i in range(start, start + args.batch_size)]
@@ -145,11 +239,13 @@ def main():
         weights = np.concatenate([d.loss_fn_inputs["weights"].tolist() for d in batch])
         loss = -np.dot(logprobs, weights) / max(weights.sum(), 1)
         print(f"  Step {step+1}/{args.num_steps} | Loss: {loss:.4f}")
+    
 
     # Save checkpoint
     print(f"\nSaving checkpoint '{args.checkpoint_name}'...")
     ckpt = tc.save_weights_for_sampler(name=args.checkpoint_name).result()
     checkpoint_path = ckpt.path
+    #checkpoint_path = best_checkpoint_path
     print(f"  Checkpoint saved: {checkpoint_path}")
 
     # Publish
@@ -166,6 +262,7 @@ def main():
         "checkpoint_path": checkpoint_path,
         "base_model": MODEL,
         "renderer_name": renderer_name,
+        #"best_val_loss": best_val_loss,
         "training": {
             "num_steps": args.num_steps,
             "batch_size": args.batch_size,
