@@ -1,22 +1,22 @@
 {
-  "checkpoint_path": "tinker://50c662e2-c7c7-531e-ae36-374041947c0d:train:0/sampler_weights/demo",
-  "base_model": "meta-llama/Llama-3.2-1B",
+  "checkpoint_path": "tinker://eae3154c-fd64-5610-812d-965d7d287c22:train:0/sampler_weights/demo",
+  "base_model": "meta-llama/Llama-3.2-3B",
   "settings": {
     "temperature": 0.0,
     "top_p": 1.0
   },
   "ifeval": {
     "metrics": {
-      "google/IFEval/prompt_strict_acc": 0.16820702402957485,
-      "google/IFEval/prompt_strict_stderr": 0.016096550188063007,
-      "google/IFEval/prompt_loose_acc": 0.17929759704251386,
-      "google/IFEval/prompt_loose_stderr": 0.016507572265663423,
-      "google/IFEval/inst_strict_acc": 0.2805755395683453,
-      "google/IFEval/inst_strict_stderr": 0.015936013462937534,
-      "google/IFEval/inst_loose_acc": 0.2961630695443645,
-      "google/IFEval/inst_loose_stderr": 0.016067434490292676,
-      "google/IFEval/final_acc": 0.23106080754619962,
-      "google/IFEval/final_stderr": 0.01486450858431225
+      "google/IFEval/prompt_strict_acc": 0.15711645101663585,
+      "google/IFEval/prompt_strict_stderr": 0.01566021568347361,
+      "google/IFEval/prompt_loose_acc": 0.17375231053604437,
+      "google/IFEval/prompt_loose_stderr": 0.01630510287765143,
+      "google/IFEval/inst_strict_acc": 0.26618705035971224,
+      "google/IFEval/inst_strict_stderr": 0.015680543341503827,
+      "google/IFEval/inst_loose_acc": 0.290167865707434,
+      "google/IFEval/inst_loose_stderr": 0.016119633963430646,
+      "google/IFEval/final_acc": 0.22180591940495661,
+      "google/IFEval/final_stderr": 0.01460145551701109
     },
     "samples": [
       {
@@ -104,8 +104,8 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 3,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 143,
@@ -113,23 +113,23 @@
         "prompt_loose": false,
         "num_instructions": 2,
         "inst_strict": 0,
-        "inst_loose": 1
+        "inst_loose": 0
       },
       {
         "id": 152,
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 163,
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 164,
@@ -173,11 +173,11 @@
       },
       {
         "id": 201,
-        "prompt_strict": false,
-        "prompt_loose": false,
+        "prompt_strict": true,
+        "prompt_loose": true,
         "num_instructions": 1,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 202,
@@ -200,8 +200,8 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 219,
@@ -229,11 +229,11 @@
       },
       {
         "id": 247,
-        "prompt_strict": true,
-        "prompt_loose": true,
+        "prompt_strict": false,
+        "prompt_loose": false,
         "num_instructions": 1,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 251,
@@ -245,11 +245,11 @@
       },
       {
         "id": 260,
-        "prompt_strict": false,
-        "prompt_loose": false,
+        "prompt_strict": true,
+        "prompt_loose": true,
         "num_instructions": 2,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 2,
+        "inst_loose": 2
       },
       {
         "id": 279,
@@ -261,19 +261,19 @@
       },
       {
         "id": 281,
-        "prompt_strict": true,
-        "prompt_loose": true,
+        "prompt_strict": false,
+        "prompt_loose": false,
         "num_instructions": 1,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 286,
-        "prompt_strict": false,
-        "prompt_loose": false,
+        "prompt_strict": true,
+        "prompt_loose": true,
         "num_instructions": 2,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 2,
+        "inst_loose": 2
       },
       {
         "id": 288,
@@ -309,19 +309,19 @@
       },
       {
         "id": 301,
-        "prompt_strict": false,
-        "prompt_loose": true,
-        "num_instructions": 1,
-        "inst_strict": 0,
-        "inst_loose": 1
-      },
-      {
-        "id": 321,
         "prompt_strict": true,
         "prompt_loose": true,
         "num_instructions": 1,
         "inst_strict": 1,
         "inst_loose": 1
+      },
+      {
+        "id": 321,
+        "prompt_strict": false,
+        "prompt_loose": false,
+        "num_instructions": 1,
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 322,
@@ -341,11 +341,11 @@
       },
       {
         "id": 332,
-        "prompt_strict": true,
-        "prompt_loose": true,
+        "prompt_strict": false,
+        "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 2,
-        "inst_loose": 2
+        "inst_strict": 0,
+        "inst_loose": 1
       },
       {
         "id": 334,
@@ -368,8 +368,8 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 343,
@@ -384,8 +384,8 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 357,
@@ -400,8 +400,8 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 374,
@@ -417,7 +417,7 @@
         "prompt_loose": false,
         "num_instructions": 3,
         "inst_strict": 1,
-        "inst_loose": 1
+        "inst_loose": 2
       },
       {
         "id": 1001,
@@ -480,8 +480,8 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 3,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 2,
+        "inst_loose": 2
       },
       {
         "id": 1072,
@@ -494,10 +494,10 @@
       {
         "id": 1075,
         "prompt_strict": false,
-        "prompt_loose": false,
+        "prompt_loose": true,
         "num_instructions": 1,
         "inst_strict": 0,
-        "inst_loose": 0
+        "inst_loose": 1
       },
       {
         "id": 1082,
@@ -525,11 +525,11 @@
       },
       {
         "id": 1094,
-        "prompt_strict": true,
-        "prompt_loose": true,
+        "prompt_strict": false,
+        "prompt_loose": false,
         "num_instructions": 1,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 1098,
@@ -560,8 +560,8 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 1127,
@@ -581,11 +581,11 @@
       },
       {
         "id": 1129,
-        "prompt_strict": false,
-        "prompt_loose": false,
+        "prompt_strict": true,
+        "prompt_loose": true,
         "num_instructions": 2,
-        "inst_strict": 0,
-        "inst_loose": 1
+        "inst_strict": 2,
+        "inst_loose": 2
       },
       {
         "id": 1130,
@@ -616,16 +616,16 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 1139,
-        "prompt_strict": false,
-        "prompt_loose": false,
+        "prompt_strict": true,
+        "prompt_loose": true,
         "num_instructions": 2,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 2,
+        "inst_loose": 2
       },
       {
         "id": 1147,
@@ -638,10 +638,10 @@
       {
         "id": 1148,
         "prompt_strict": false,
-        "prompt_loose": false,
+        "prompt_loose": true,
         "num_instructions": 1,
         "inst_strict": 0,
-        "inst_loose": 0
+        "inst_loose": 1
       },
       {
         "id": 1153,
@@ -672,8 +672,8 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 3,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 2,
+        "inst_loose": 2
       },
       {
         "id": 1180,
@@ -685,11 +685,11 @@
       },
       {
         "id": 1187,
-        "prompt_strict": true,
-        "prompt_loose": true,
+        "prompt_strict": false,
+        "prompt_loose": false,
         "num_instructions": 1,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 1203,
@@ -704,8 +704,8 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 1217,
@@ -752,8 +752,8 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 1242,
@@ -761,7 +761,7 @@
         "prompt_loose": false,
         "num_instructions": 2,
         "inst_strict": 0,
-        "inst_loose": 0
+        "inst_loose": 1
       },
       {
         "id": 1246,
@@ -781,11 +781,11 @@
       },
       {
         "id": 1251,
-        "prompt_strict": true,
-        "prompt_loose": true,
+        "prompt_strict": false,
+        "prompt_loose": false,
         "num_instructions": 1,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 1258,
@@ -805,11 +805,11 @@
       },
       {
         "id": 1262,
-        "prompt_strict": false,
-        "prompt_loose": false,
+        "prompt_strict": true,
+        "prompt_loose": true,
         "num_instructions": 2,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 2,
+        "inst_loose": 2
       },
       {
         "id": 1265,
@@ -856,8 +856,8 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 3,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 1305,
@@ -877,11 +877,11 @@
       },
       {
         "id": 1314,
-        "prompt_strict": false,
-        "prompt_loose": false,
+        "prompt_strict": true,
+        "prompt_loose": true,
         "num_instructions": 2,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 2,
+        "inst_loose": 2
       },
       {
         "id": 1322,
@@ -920,8 +920,8 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 3,
-        "inst_strict": 2,
-        "inst_loose": 2
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 1361,
@@ -933,11 +933,11 @@
       },
       {
         "id": 1367,
-        "prompt_strict": true,
-        "prompt_loose": true,
+        "prompt_strict": false,
+        "prompt_loose": false,
         "num_instructions": 1,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 1372,
@@ -952,24 +952,24 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 1377,
-        "prompt_strict": false,
-        "prompt_loose": false,
+        "prompt_strict": true,
+        "prompt_loose": true,
         "num_instructions": 1,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 1379,
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 3,
-        "inst_strict": 2,
-        "inst_loose": 2
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 1381,
@@ -992,8 +992,8 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 3,
-        "inst_strict": 2,
-        "inst_loose": 2
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 1393,
@@ -1005,11 +1005,11 @@
       },
       {
         "id": 1402,
-        "prompt_strict": true,
-        "prompt_loose": true,
+        "prompt_strict": false,
+        "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 2,
-        "inst_loose": 2
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 1418,
@@ -1024,31 +1024,31 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 1446,
-        "prompt_strict": false,
-        "prompt_loose": false,
+        "prompt_strict": true,
+        "prompt_loose": true,
         "num_instructions": 1,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 1466,
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 1476,
-        "prompt_strict": true,
+        "prompt_strict": false,
         "prompt_loose": true,
         "num_instructions": 2,
-        "inst_strict": 2,
+        "inst_strict": 0,
         "inst_loose": 2
       },
       {
@@ -1061,19 +1061,19 @@
       },
       {
         "id": 1480,
-        "prompt_strict": false,
-        "prompt_loose": false,
+        "prompt_strict": true,
+        "prompt_loose": true,
         "num_instructions": 1,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 1481,
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 1498,
@@ -1085,27 +1085,27 @@
       },
       {
         "id": 1508,
-        "prompt_strict": true,
-        "prompt_loose": true,
+        "prompt_strict": false,
+        "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 2,
-        "inst_loose": 2
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 1512,
-        "prompt_strict": true,
-        "prompt_loose": true,
+        "prompt_strict": false,
+        "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 2,
-        "inst_loose": 2
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 1516,
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 1518,
@@ -1128,8 +1128,8 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 1537,
@@ -1165,11 +1165,11 @@
       },
       {
         "id": 1561,
-        "prompt_strict": true,
-        "prompt_loose": true,
+        "prompt_strict": false,
+        "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 2,
-        "inst_loose": 2
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 1566,
@@ -1184,8 +1184,8 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 3,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 1580,
@@ -1205,11 +1205,11 @@
       },
       {
         "id": 1591,
-        "prompt_strict": true,
-        "prompt_loose": true,
+        "prompt_strict": false,
+        "prompt_loose": false,
         "num_instructions": 1,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 1592,
@@ -1253,11 +1253,11 @@
       },
       {
         "id": 1620,
-        "prompt_strict": true,
-        "prompt_loose": true,
+        "prompt_strict": false,
+        "prompt_loose": false,
         "num_instructions": 1,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 1627,
@@ -1269,11 +1269,11 @@
       },
       {
         "id": 1629,
-        "prompt_strict": false,
-        "prompt_loose": false,
+        "prompt_strict": true,
+        "prompt_loose": true,
         "num_instructions": 1,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 1634,
@@ -1317,11 +1317,11 @@
       },
       {
         "id": 1653,
-        "prompt_strict": true,
-        "prompt_loose": true,
+        "prompt_strict": false,
+        "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 2,
-        "inst_loose": 2
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 1656,
@@ -1373,27 +1373,27 @@
       },
       {
         "id": 1686,
-        "prompt_strict": true,
-        "prompt_loose": true,
+        "prompt_strict": false,
+        "prompt_loose": false,
         "num_instructions": 1,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 1691,
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 1705,
-        "prompt_strict": false,
-        "prompt_loose": false,
+        "prompt_strict": true,
+        "prompt_loose": true,
         "num_instructions": 2,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 2,
+        "inst_loose": 2
       },
       {
         "id": 1713,
@@ -1438,18 +1438,18 @@
       {
         "id": 1746,
         "prompt_strict": false,
-        "prompt_loose": false,
+        "prompt_loose": true,
         "num_instructions": 1,
         "inst_strict": 0,
-        "inst_loose": 0
+        "inst_loose": 1
       },
       {
         "id": 1759,
-        "prompt_strict": false,
-        "prompt_loose": false,
+        "prompt_strict": true,
+        "prompt_loose": true,
         "num_instructions": 1,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 1773,
@@ -1472,8 +1472,8 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 1781,
@@ -1488,7 +1488,7 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 1,
+        "inst_strict": 0,
         "inst_loose": 1
       },
       {
@@ -1501,27 +1501,27 @@
       },
       {
         "id": 1802,
-        "prompt_strict": true,
-        "prompt_loose": true,
+        "prompt_strict": false,
+        "prompt_loose": false,
         "num_instructions": 1,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 1813,
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 1823,
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 1825,
@@ -1565,11 +1565,11 @@
       },
       {
         "id": 1857,
-        "prompt_strict": true,
-        "prompt_loose": true,
+        "prompt_strict": false,
+        "prompt_loose": false,
         "num_instructions": 1,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 1858,
@@ -1613,11 +1613,11 @@
       },
       {
         "id": 1893,
-        "prompt_strict": false,
-        "prompt_loose": false,
+        "prompt_strict": true,
+        "prompt_loose": true,
         "num_instructions": 1,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 1897,
@@ -1685,35 +1685,35 @@
       },
       {
         "id": 1936,
-        "prompt_strict": false,
-        "prompt_loose": false,
+        "prompt_strict": true,
+        "prompt_loose": true,
         "num_instructions": 2,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 2,
+        "inst_loose": 2
       },
       {
         "id": 1939,
-        "prompt_strict": true,
-        "prompt_loose": true,
+        "prompt_strict": false,
+        "prompt_loose": false,
         "num_instructions": 1,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 1943,
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 1944,
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 1954,
@@ -1765,11 +1765,11 @@
       },
       {
         "id": 2010,
-        "prompt_strict": false,
-        "prompt_loose": false,
+        "prompt_strict": true,
+        "prompt_loose": true,
         "num_instructions": 1,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 2015,
@@ -1789,19 +1789,19 @@
       },
       {
         "id": 2028,
-        "prompt_strict": true,
-        "prompt_loose": true,
-        "num_instructions": 1,
-        "inst_strict": 1,
-        "inst_loose": 1
-      },
-      {
-        "id": 2034,
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 1,
         "inst_strict": 0,
         "inst_loose": 0
+      },
+      {
+        "id": 2034,
+        "prompt_strict": true,
+        "prompt_loose": true,
+        "num_instructions": 1,
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 2035,
@@ -1813,11 +1813,11 @@
       },
       {
         "id": 2041,
-        "prompt_strict": false,
-        "prompt_loose": false,
+        "prompt_strict": true,
+        "prompt_loose": true,
         "num_instructions": 2,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 2,
+        "inst_loose": 2
       },
       {
         "id": 2063,
@@ -1837,19 +1837,19 @@
       },
       {
         "id": 2070,
-        "prompt_strict": false,
-        "prompt_loose": false,
-        "num_instructions": 1,
-        "inst_strict": 0,
-        "inst_loose": 0
-      },
-      {
-        "id": 2071,
         "prompt_strict": true,
         "prompt_loose": true,
         "num_instructions": 1,
         "inst_strict": 1,
         "inst_loose": 1
+      },
+      {
+        "id": 2071,
+        "prompt_strict": false,
+        "prompt_loose": false,
+        "num_instructions": 1,
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 2078,
@@ -1864,8 +1864,8 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 2097,
@@ -1880,8 +1880,8 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 2107,
@@ -1941,19 +1941,19 @@
       },
       {
         "id": 2164,
-        "prompt_strict": true,
-        "prompt_loose": true,
+        "prompt_strict": false,
+        "prompt_loose": false,
         "num_instructions": 1,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 2169,
-        "prompt_strict": false,
-        "prompt_loose": false,
+        "prompt_strict": true,
+        "prompt_loose": true,
         "num_instructions": 2,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 2,
+        "inst_loose": 2
       },
       {
         "id": 2180,
@@ -2021,11 +2021,11 @@
       },
       {
         "id": 2229,
-        "prompt_strict": true,
-        "prompt_loose": true,
+        "prompt_strict": false,
+        "prompt_loose": false,
         "num_instructions": 1,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 2230,
@@ -2037,11 +2037,11 @@
       },
       {
         "id": 2239,
-        "prompt_strict": false,
-        "prompt_loose": false,
+        "prompt_strict": true,
+        "prompt_loose": true,
         "num_instructions": 1,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 2243,
@@ -2109,26 +2109,26 @@
       },
       {
         "id": 2268,
-        "prompt_strict": false,
-        "prompt_loose": false,
+        "prompt_strict": true,
+        "prompt_loose": true,
         "num_instructions": 1,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 2273,
-        "prompt_strict": false,
-        "prompt_loose": false,
+        "prompt_strict": true,
+        "prompt_loose": true,
         "num_instructions": 1,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 2275,
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 3,
-        "inst_strict": 2,
+        "inst_strict": 0,
         "inst_loose": 2
       },
       {
@@ -2165,11 +2165,11 @@
       },
       {
         "id": 2304,
-        "prompt_strict": false,
-        "prompt_loose": false,
+        "prompt_strict": true,
+        "prompt_loose": true,
         "num_instructions": 1,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 2305,
@@ -2357,11 +2357,11 @@
       },
       {
         "id": 2396,
-        "prompt_strict": true,
-        "prompt_loose": true,
+        "prompt_strict": false,
+        "prompt_loose": false,
         "num_instructions": 1,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 2398,
@@ -2389,6 +2389,22 @@
       },
       {
         "id": 2417,
+        "prompt_strict": false,
+        "prompt_loose": false,
+        "num_instructions": 1,
+        "inst_strict": 0,
+        "inst_loose": 0
+      },
+      {
+        "id": 2422,
+        "prompt_strict": false,
+        "prompt_loose": false,
+        "num_instructions": 2,
+        "inst_strict": 0,
+        "inst_loose": 0
+      },
+      {
+        "id": 2432,
         "prompt_strict": true,
         "prompt_loose": true,
         "num_instructions": 1,
@@ -2396,36 +2412,20 @@
         "inst_loose": 1
       },
       {
-        "id": 2422,
-        "prompt_strict": false,
-        "prompt_loose": false,
-        "num_instructions": 2,
-        "inst_strict": 1,
-        "inst_loose": 1
-      },
-      {
-        "id": 2432,
-        "prompt_strict": false,
-        "prompt_loose": false,
-        "num_instructions": 1,
-        "inst_strict": 0,
-        "inst_loose": 0
-      },
-      {
         "id": 2436,
-        "prompt_strict": false,
-        "prompt_loose": false,
+        "prompt_strict": true,
+        "prompt_loose": true,
         "num_instructions": 2,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 2,
+        "inst_loose": 2
       },
       {
         "id": 2439,
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 3,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 2441,
@@ -2437,27 +2437,27 @@
       },
       {
         "id": 2447,
-        "prompt_strict": false,
-        "prompt_loose": false,
+        "prompt_strict": true,
+        "prompt_loose": true,
         "num_instructions": 1,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 2449,
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 2457,
         "prompt_strict": false,
-        "prompt_loose": true,
+        "prompt_loose": false,
         "num_instructions": 1,
         "inst_strict": 0,
-        "inst_loose": 1
+        "inst_loose": 0
       },
       {
         "id": 2464,
@@ -2485,11 +2485,11 @@
       },
       {
         "id": 2471,
-        "prompt_strict": false,
-        "prompt_loose": false,
+        "prompt_strict": true,
+        "prompt_loose": true,
         "num_instructions": 2,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 2,
+        "inst_loose": 2
       },
       {
         "id": 2475,
@@ -2520,8 +2520,8 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 2505,
@@ -2542,10 +2542,10 @@
       {
         "id": 2517,
         "prompt_strict": false,
-        "prompt_loose": true,
+        "prompt_loose": false,
         "num_instructions": 1,
         "inst_strict": 0,
-        "inst_loose": 1
+        "inst_loose": 0
       },
       {
         "id": 2531,
@@ -2558,10 +2558,10 @@
       {
         "id": 2532,
         "prompt_strict": false,
-        "prompt_loose": false,
+        "prompt_loose": true,
         "num_instructions": 1,
         "inst_strict": 0,
-        "inst_loose": 0
+        "inst_loose": 1
       },
       {
         "id": 2534,
@@ -2589,27 +2589,27 @@
       },
       {
         "id": 2567,
-        "prompt_strict": false,
-        "prompt_loose": false,
+        "prompt_strict": true,
+        "prompt_loose": true,
         "num_instructions": 1,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 2571,
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 3,
-        "inst_strict": 2,
-        "inst_loose": 2
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 2577,
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 2583,
@@ -2629,11 +2629,11 @@
       },
       {
         "id": 2589,
-        "prompt_strict": true,
-        "prompt_loose": true,
+        "prompt_strict": false,
+        "prompt_loose": false,
         "num_instructions": 1,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 2590,
@@ -2648,32 +2648,32 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 2596,
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 3,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 2602,
-        "prompt_strict": true,
-        "prompt_loose": true,
+        "prompt_strict": false,
+        "prompt_loose": false,
         "num_instructions": 1,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 2605,
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 2616,
@@ -2685,19 +2685,19 @@
       },
       {
         "id": 2617,
-        "prompt_strict": false,
-        "prompt_loose": false,
+        "prompt_strict": true,
+        "prompt_loose": true,
         "num_instructions": 1,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 2622,
-        "prompt_strict": false,
-        "prompt_loose": false,
+        "prompt_strict": true,
+        "prompt_loose": true,
         "num_instructions": 1,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 2628,
@@ -2721,7 +2721,7 @@
         "prompt_loose": false,
         "num_instructions": 2,
         "inst_strict": 0,
-        "inst_loose": 0
+        "inst_loose": 1
       },
       {
         "id": 2653,
@@ -2741,19 +2741,19 @@
       },
       {
         "id": 2667,
-        "prompt_strict": false,
-        "prompt_loose": false,
-        "num_instructions": 1,
-        "inst_strict": 0,
-        "inst_loose": 0
-      },
-      {
-        "id": 2674,
         "prompt_strict": true,
         "prompt_loose": true,
         "num_instructions": 1,
         "inst_strict": 1,
         "inst_loose": 1
+      },
+      {
+        "id": 2674,
+        "prompt_strict": false,
+        "prompt_loose": false,
+        "num_instructions": 1,
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 2677,
@@ -2768,8 +2768,8 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 3,
-        "inst_strict": 2,
-        "inst_loose": 2
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 2685,
@@ -2792,24 +2792,24 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 3,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 2713,
-        "prompt_strict": true,
-        "prompt_loose": true,
+        "prompt_strict": false,
+        "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 2,
-        "inst_loose": 2
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 2716,
-        "prompt_strict": false,
-        "prompt_loose": false,
+        "prompt_strict": true,
+        "prompt_loose": true,
         "num_instructions": 1,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 2724,
@@ -2832,8 +2832,8 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 2739,
@@ -2901,11 +2901,11 @@
       },
       {
         "id": 2780,
-        "prompt_strict": true,
-        "prompt_loose": true,
+        "prompt_strict": false,
+        "prompt_loose": false,
         "num_instructions": 1,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 2785,
@@ -2949,11 +2949,11 @@
       },
       {
         "id": 2807,
-        "prompt_strict": true,
-        "prompt_loose": true,
+        "prompt_strict": false,
+        "prompt_loose": false,
         "num_instructions": 1,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 2811,
@@ -2989,11 +2989,11 @@
       },
       {
         "id": 2828,
-        "prompt_strict": false,
-        "prompt_loose": false,
+        "prompt_strict": true,
+        "prompt_loose": true,
         "num_instructions": 1,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 2829,
@@ -3016,40 +3016,40 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 2849,
-        "prompt_strict": true,
-        "prompt_loose": true,
+        "prompt_strict": false,
+        "prompt_loose": false,
         "num_instructions": 1,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 2853,
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 2857,
-        "prompt_strict": true,
-        "prompt_loose": true,
+        "prompt_strict": false,
+        "prompt_loose": false,
         "num_instructions": 1,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 2859,
-        "prompt_strict": true,
-        "prompt_loose": true,
+        "prompt_strict": false,
+        "prompt_loose": false,
         "num_instructions": 1,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 2870,
@@ -3080,8 +3080,8 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 2889,
@@ -3093,6 +3093,14 @@
       },
       {
         "id": 2904,
+        "prompt_strict": false,
+        "prompt_loose": false,
+        "num_instructions": 1,
+        "inst_strict": 0,
+        "inst_loose": 0
+      },
+      {
+        "id": 2905,
         "prompt_strict": true,
         "prompt_loose": true,
         "num_instructions": 1,
@@ -3100,20 +3108,12 @@
         "inst_loose": 1
       },
       {
-        "id": 2905,
-        "prompt_strict": false,
-        "prompt_loose": false,
-        "num_instructions": 1,
-        "inst_strict": 0,
-        "inst_loose": 0
-      },
-      {
         "id": 2908,
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 2909,
@@ -3133,11 +3133,11 @@
       },
       {
         "id": 2918,
-        "prompt_strict": false,
-        "prompt_loose": false,
+        "prompt_strict": true,
+        "prompt_loose": true,
         "num_instructions": 1,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 2921,
@@ -3176,24 +3176,24 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 3,
-        "inst_strict": 0,
-        "inst_loose": 1
+        "inst_strict": 1,
+        "inst_loose": 2
       },
       {
         "id": 2957,
-        "prompt_strict": false,
-        "prompt_loose": false,
-        "num_instructions": 1,
-        "inst_strict": 0,
-        "inst_loose": 0
-      },
-      {
-        "id": 2969,
         "prompt_strict": true,
         "prompt_loose": true,
         "num_instructions": 1,
         "inst_strict": 1,
         "inst_loose": 1
+      },
+      {
+        "id": 2969,
+        "prompt_strict": false,
+        "prompt_loose": false,
+        "num_instructions": 1,
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 2977,
@@ -3213,11 +3213,11 @@
       },
       {
         "id": 2997,
-        "prompt_strict": false,
-        "prompt_loose": false,
+        "prompt_strict": true,
+        "prompt_loose": true,
         "num_instructions": 1,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 3001,
@@ -3248,16 +3248,16 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 3048,
-        "prompt_strict": false,
-        "prompt_loose": false,
+        "prompt_strict": true,
+        "prompt_loose": true,
         "num_instructions": 1,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 3057,
@@ -3301,11 +3301,11 @@
       },
       {
         "id": 3079,
-        "prompt_strict": false,
-        "prompt_loose": false,
+        "prompt_strict": true,
+        "prompt_loose": true,
         "num_instructions": 1,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 3081,
@@ -3344,8 +3344,8 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 3,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 3109,
@@ -3368,8 +3368,8 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 3,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 3126,
@@ -3389,11 +3389,11 @@
       },
       {
         "id": 3131,
-        "prompt_strict": true,
-        "prompt_loose": true,
+        "prompt_strict": false,
+        "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 2,
-        "inst_loose": 2
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 3150,
@@ -3432,8 +3432,8 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 3,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 2,
+        "inst_loose": 2
       },
       {
         "id": 3191,
@@ -3448,8 +3448,8 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 3,
-        "inst_strict": 2,
-        "inst_loose": 2
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 3198,
@@ -3472,8 +3472,8 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 3221,
@@ -3493,11 +3493,11 @@
       },
       {
         "id": 3224,
-        "prompt_strict": false,
-        "prompt_loose": false,
+        "prompt_strict": true,
+        "prompt_loose": true,
         "num_instructions": 1,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 3241,
@@ -3512,16 +3512,16 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 3245,
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 3256,
@@ -3552,8 +3552,8 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 3,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 2,
+        "inst_loose": 2
       },
       {
         "id": 3280,
@@ -3568,8 +3568,8 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 3287,
@@ -3584,8 +3584,8 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 3305,
@@ -3600,8 +3600,8 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 3,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 3315,
@@ -3624,15 +3624,15 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 3326,
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 0,
+        "inst_strict": 1,
         "inst_loose": 1
       },
       {
@@ -3640,8 +3640,8 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 3,
-        "inst_strict": 2,
-        "inst_loose": 2
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 3329,
@@ -3656,8 +3656,8 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 3,
-        "inst_strict": 1,
-        "inst_loose": 2
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 3345,
@@ -3680,8 +3680,8 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 3362,
@@ -3694,10 +3694,10 @@
       {
         "id": 3367,
         "prompt_strict": false,
-        "prompt_loose": false,
+        "prompt_loose": true,
         "num_instructions": 2,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 2
       },
       {
         "id": 3369,
@@ -3728,8 +3728,8 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 3386,
@@ -3821,27 +3821,27 @@
       },
       {
         "id": 3439,
-        "prompt_strict": true,
-        "prompt_loose": true,
-        "num_instructions": 1,
-        "inst_strict": 1,
-        "inst_loose": 1
-      },
-      {
-        "id": 3442,
-        "prompt_strict": true,
-        "prompt_loose": true,
-        "num_instructions": 2,
-        "inst_strict": 2,
-        "inst_loose": 2
-      },
-      {
-        "id": 3445,
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 1,
         "inst_strict": 0,
         "inst_loose": 0
+      },
+      {
+        "id": 3442,
+        "prompt_strict": false,
+        "prompt_loose": false,
+        "num_instructions": 2,
+        "inst_strict": 1,
+        "inst_loose": 1
+      },
+      {
+        "id": 3445,
+        "prompt_strict": true,
+        "prompt_loose": true,
+        "num_instructions": 1,
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 3453,
@@ -3869,19 +3869,19 @@
       },
       {
         "id": 3478,
-        "prompt_strict": false,
-        "prompt_loose": false,
+        "prompt_strict": true,
+        "prompt_loose": true,
         "num_instructions": 1,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 3479,
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 3484,
@@ -3921,7 +3921,7 @@
         "prompt_loose": false,
         "num_instructions": 2,
         "inst_strict": 0,
-        "inst_loose": 1
+        "inst_loose": 0
       },
       {
         "id": 3513,
@@ -3960,16 +3960,16 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 3540,
-        "prompt_strict": true,
-        "prompt_loose": true,
+        "prompt_strict": false,
+        "prompt_loose": false,
         "num_instructions": 1,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 3549,
@@ -3989,11 +3989,11 @@
       },
       {
         "id": 3563,
-        "prompt_strict": false,
-        "prompt_loose": false,
+        "prompt_strict": true,
+        "prompt_loose": true,
         "num_instructions": 1,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 3565,
@@ -4053,11 +4053,11 @@
       },
       {
         "id": 3615,
-        "prompt_strict": true,
-        "prompt_loose": true,
+        "prompt_strict": false,
+        "prompt_loose": false,
         "num_instructions": 1,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 3617,
@@ -4072,7 +4072,7 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 1,
+        "inst_strict": 0,
         "inst_loose": 1
       },
       {
@@ -4093,27 +4093,27 @@
       },
       {
         "id": 3629,
-        "prompt_strict": true,
-        "prompt_loose": true,
+        "prompt_strict": false,
+        "prompt_loose": false,
         "num_instructions": 1,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 3631,
-        "prompt_strict": true,
-        "prompt_loose": true,
+        "prompt_strict": false,
+        "prompt_loose": false,
         "num_instructions": 1,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 3633,
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 3644,
@@ -4136,16 +4136,16 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 3672,
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 3,
-        "inst_strict": 2,
-        "inst_loose": 2
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 3680,
@@ -4173,11 +4173,11 @@
       },
       {
         "id": 3691,
-        "prompt_strict": true,
-        "prompt_loose": true,
+        "prompt_strict": false,
+        "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 2,
-        "inst_loose": 2
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 3697,
@@ -4200,16 +4200,16 @@
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 2,
-        "inst_strict": 0,
-        "inst_loose": 0
+        "inst_strict": 1,
+        "inst_loose": 1
       },
       {
         "id": 3710,
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 3,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 3718,
@@ -4221,22 +4221,6 @@
       },
       {
         "id": 3719,
-        "prompt_strict": true,
-        "prompt_loose": true,
-        "num_instructions": 1,
-        "inst_strict": 1,
-        "inst_loose": 1
-      },
-      {
-        "id": 3724,
-        "prompt_strict": false,
-        "prompt_loose": false,
-        "num_instructions": 3,
-        "inst_strict": 1,
-        "inst_loose": 1
-      },
-      {
-        "id": 3732,
         "prompt_strict": false,
         "prompt_loose": false,
         "num_instructions": 1,
@@ -4244,12 +4228,28 @@
         "inst_loose": 0
       },
       {
-        "id": 3739,
+        "id": 3724,
+        "prompt_strict": false,
+        "prompt_loose": false,
+        "num_instructions": 3,
+        "inst_strict": 0,
+        "inst_loose": 0
+      },
+      {
+        "id": 3732,
         "prompt_strict": true,
         "prompt_loose": true,
         "num_instructions": 1,
         "inst_strict": 1,
         "inst_loose": 1
+      },
+      {
+        "id": 3739,
+        "prompt_strict": false,
+        "prompt_loose": false,
+        "num_instructions": 1,
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 3743,
@@ -4261,6 +4261,14 @@
       },
       {
         "id": 3744,
+        "prompt_strict": false,
+        "prompt_loose": false,
+        "num_instructions": 2,
+        "inst_strict": 1,
+        "inst_loose": 1
+      },
+      {
+        "id": 3748,
         "prompt_strict": true,
         "prompt_loose": true,
         "num_instructions": 2,
@@ -4268,20 +4276,12 @@
         "inst_loose": 2
       },
       {
-        "id": 3748,
+        "id": 3749,
         "prompt_strict": false,
         "prompt_loose": false,
-        "num_instructions": 2,
+        "num_instructions": 1,
         "inst_strict": 0,
         "inst_loose": 0
-      },
-      {
-        "id": 3749,
-        "prompt_strict": true,
-        "prompt_loose": true,
-        "num_instructions": 1,
-        "inst_strict": 1,
-        "inst_loose": 1
       },
       {
         "id": 3750,
@@ -4301,11 +4301,11 @@
       },
       {
         "id": 3752,
-        "prompt_strict": true,
-        "prompt_loose": true,
+        "prompt_strict": false,
+        "prompt_loose": false,
         "num_instructions": 1,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 3753,
@@ -4317,19 +4317,19 @@
       },
       {
         "id": 3754,
-        "prompt_strict": true,
-        "prompt_loose": true,
+        "prompt_strict": false,
+        "prompt_loose": false,
         "num_instructions": 1,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 3755,
-        "prompt_strict": true,
-        "prompt_loose": true,
+        "prompt_strict": false,
+        "prompt_loose": false,
         "num_instructions": 1,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       },
       {
         "id": 3756,
@@ -4341,18 +4341,18 @@
       },
       {
         "id": 3757,
-        "prompt_strict": true,
-        "prompt_loose": true,
+        "prompt_strict": false,
+        "prompt_loose": false,
         "num_instructions": 1,
-        "inst_strict": 1,
-        "inst_loose": 1
+        "inst_strict": 0,
+        "inst_loose": 0
       }
     ]
   },
   "gsm8k": {
     "metrics": {
-      "openai/gsm8k/accuracy": 0.056103108415466264,
-      "openai/gsm8k/stderr": 0.006338668431321933
+      "openai/gsm8k/accuracy": 0.09173616376042457,
+      "openai/gsm8k/stderr": 0.007950942148339442
     },
     "samples": [
       {
@@ -4425,7 +4425,7 @@
       },
       {
         "id": "gsm8k_028dac3e",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_02cc9990",
@@ -4437,7 +4437,7 @@
       },
       {
         "id": "gsm8k_0341e62b",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_03810bc2",
@@ -4489,7 +4489,7 @@
       },
       {
         "id": "gsm8k_067a279f",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_06d3a6f3",
@@ -4577,7 +4577,7 @@
       },
       {
         "id": "gsm8k_0a96f3cf",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_0ac4f33a",
@@ -4641,7 +4641,7 @@
       },
       {
         "id": "gsm8k_0d9f5ee0",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_0deb5903",
@@ -4657,7 +4657,7 @@
       },
       {
         "id": "gsm8k_0f53259b",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_0f96f9bc",
@@ -4717,11 +4717,11 @@
       },
       {
         "id": "gsm8k_139c7a34",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_13abe0fd",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_13febe93",
@@ -4741,7 +4741,7 @@
       },
       {
         "id": "gsm8k_14d7cea6",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_14e4e949",
@@ -4761,7 +4761,7 @@
       },
       {
         "id": "gsm8k_16146566",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_161c8db4",
@@ -4773,7 +4773,7 @@
       },
       {
         "id": "gsm8k_16ae3eba",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_1821fbe3",
@@ -4785,7 +4785,7 @@
       },
       {
         "id": "gsm8k_185cc22a",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_1863c275",
@@ -4801,7 +4801,7 @@
       },
       {
         "id": "gsm8k_1883d82c",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_18879ca7",
@@ -4837,7 +4837,7 @@
       },
       {
         "id": "gsm8k_19c62af2",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_19dfcc4c",
@@ -4861,7 +4861,7 @@
       },
       {
         "id": "gsm8k_1c313347",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_1c5d7240",
@@ -4869,7 +4869,7 @@
       },
       {
         "id": "gsm8k_1c6decdc",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_1c7c4606",
@@ -4893,7 +4893,7 @@
       },
       {
         "id": "gsm8k_1cedac7e",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_1cf1bb33",
@@ -5025,7 +5025,7 @@
       },
       {
         "id": "gsm8k_2343423f",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_234fe79a",
@@ -5045,7 +5045,7 @@
       },
       {
         "id": "gsm8k_23c7b671",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_24147b93",
@@ -5077,7 +5077,7 @@
       },
       {
         "id": "gsm8k_259d38de",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_25f82df6",
@@ -5153,11 +5153,11 @@
       },
       {
         "id": "gsm8k_2a4b2395",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_2a63721b",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_2af617d1",
@@ -5253,7 +5253,7 @@
       },
       {
         "id": "gsm8k_2e5ff405",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_2e6474d6",
@@ -5337,7 +5337,7 @@
       },
       {
         "id": "gsm8k_3198982d",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_31c0f791",
@@ -5365,11 +5365,11 @@
       },
       {
         "id": "gsm8k_32669449",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_330cc0b2",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_33320110",
@@ -5385,7 +5385,7 @@
       },
       {
         "id": "gsm8k_3379ef4b",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_338ab677",
@@ -5421,7 +5421,7 @@
       },
       {
         "id": "gsm8k_34620e87",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_347dd970",
@@ -5441,7 +5441,7 @@
       },
       {
         "id": "gsm8k_352af31b",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_355c0b3a",
@@ -5457,7 +5457,7 @@
       },
       {
         "id": "gsm8k_360f03b1",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_3611d94f",
@@ -5513,7 +5513,7 @@
       },
       {
         "id": "gsm8k_38081ed1",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_381bd36c",
@@ -5645,7 +5645,7 @@
       },
       {
         "id": "gsm8k_3e981b1e",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_3ea258aa",
@@ -5661,7 +5661,7 @@
       },
       {
         "id": "gsm8k_3f704ea2",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_3fd9e07f",
@@ -5737,7 +5737,7 @@
       },
       {
         "id": "gsm8k_449e7de4",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_44c672a1",
@@ -5773,7 +5773,7 @@
       },
       {
         "id": "gsm8k_45ea2d9a",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_46293fc2",
@@ -5833,7 +5833,7 @@
       },
       {
         "id": "gsm8k_48d41005",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_49136cbe",
@@ -5869,7 +5869,7 @@
       },
       {
         "id": "gsm8k_4add8d8e",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_4afdb220",
@@ -5897,7 +5897,7 @@
       },
       {
         "id": "gsm8k_4bbc63aa",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_4bc317f3",
@@ -5981,7 +5981,7 @@
       },
       {
         "id": "gsm8k_5079a8a1",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_507dbd36",
@@ -6005,7 +6005,7 @@
       },
       {
         "id": "gsm8k_50c8c672",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_50fe46e1",
@@ -6061,11 +6061,11 @@
       },
       {
         "id": "gsm8k_524bec38",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_525bc4dd",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_526634f0",
@@ -6085,7 +6085,7 @@
       },
       {
         "id": "gsm8k_52a8e7fa",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_52aedfd3",
@@ -6105,7 +6105,7 @@
       },
       {
         "id": "gsm8k_530143bc",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_5321686d",
@@ -6125,7 +6125,7 @@
       },
       {
         "id": "gsm8k_541c7f67",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_543644d7",
@@ -6209,11 +6209,11 @@
       },
       {
         "id": "gsm8k_57fb9466",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_58255e4c",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_582c3a1b",
@@ -6225,7 +6225,7 @@
       },
       {
         "id": "gsm8k_584e2946",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_584edb90",
@@ -6245,7 +6245,7 @@
       },
       {
         "id": "gsm8k_594965df",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_59738da6",
@@ -6281,7 +6281,7 @@
       },
       {
         "id": "gsm8k_5afb8f96",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_5b91add5",
@@ -6321,7 +6321,7 @@
       },
       {
         "id": "gsm8k_5d2af626",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_5d5e41bc",
@@ -6345,7 +6345,7 @@
       },
       {
         "id": "gsm8k_5f7ea556",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_5f9443e6",
@@ -6445,7 +6445,7 @@
       },
       {
         "id": "gsm8k_63f667be",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_63f950da",
@@ -6493,7 +6493,7 @@
       },
       {
         "id": "gsm8k_6526d320",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_65797f3f",
@@ -6501,7 +6501,7 @@
       },
       {
         "id": "gsm8k_657b678b",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_65836f59",
@@ -6521,7 +6521,7 @@
       },
       {
         "id": "gsm8k_668e9c8e",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_668ec8eb",
@@ -6601,7 +6601,7 @@
       },
       {
         "id": "gsm8k_6ac6556f",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_6ad8319e",
@@ -6661,7 +6661,7 @@
       },
       {
         "id": "gsm8k_6ef4718b",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_6f023867",
@@ -6701,7 +6701,7 @@
       },
       {
         "id": "gsm8k_70946ee4",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_7105004c",
@@ -6741,7 +6741,7 @@
       },
       {
         "id": "gsm8k_73768474",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_73c1ee2a",
@@ -6749,7 +6749,7 @@
       },
       {
         "id": "gsm8k_73c96c86",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_74219b79",
@@ -6765,11 +6765,11 @@
       },
       {
         "id": "gsm8k_74ec858e",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_75adc279",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_75e2a516",
@@ -6781,7 +6781,7 @@
       },
       {
         "id": "gsm8k_76a647d2",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_76a96ade",
@@ -6821,7 +6821,7 @@
       },
       {
         "id": "gsm8k_77d3eaef",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_77d9b9bb",
@@ -6845,7 +6845,7 @@
       },
       {
         "id": "gsm8k_792b15dd",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_796ada94",
@@ -6861,7 +6861,7 @@
       },
       {
         "id": "gsm8k_7a6c8201",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_7ad258db",
@@ -7041,7 +7041,7 @@
       },
       {
         "id": "gsm8k_837033a9",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_83d334f8",
@@ -7101,7 +7101,7 @@
       },
       {
         "id": "gsm8k_8680848d",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_8694c1b1",
@@ -7133,7 +7133,7 @@
       },
       {
         "id": "gsm8k_87dd6197",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_8822c80b",
@@ -7157,11 +7157,11 @@
       },
       {
         "id": "gsm8k_8902fbdf",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_8905b7fb",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_893a06ff",
@@ -7237,11 +7237,11 @@
       },
       {
         "id": "gsm8k_8c8a10a1",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_8ced0baf",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_8d8dccee",
@@ -7249,7 +7249,7 @@
       },
       {
         "id": "gsm8k_8db92231",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_8de26d32",
@@ -7305,7 +7305,7 @@
       },
       {
         "id": "gsm8k_9040fd84",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_9092a5f9",
@@ -7321,7 +7321,7 @@
       },
       {
         "id": "gsm8k_90c7c9d6",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_91025dcf",
@@ -7373,7 +7373,7 @@
       },
       {
         "id": "gsm8k_92754ca0",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_92815c9d",
@@ -7393,7 +7393,7 @@
       },
       {
         "id": "gsm8k_93ffdc50",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_942edef3",
@@ -7457,7 +7457,7 @@
       },
       {
         "id": "gsm8k_9717b47b",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_9734b4ad",
@@ -7477,7 +7477,7 @@
       },
       {
         "id": "gsm8k_979cbc71",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_97e5a1b1",
@@ -7517,7 +7517,7 @@
       },
       {
         "id": "gsm8k_99700d86",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_99758ee7",
@@ -7529,7 +7529,7 @@
       },
       {
         "id": "gsm8k_99f38078",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_9a2971e3",
@@ -7561,7 +7561,7 @@
       },
       {
         "id": "gsm8k_9af04ea1",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_9afa8915",
@@ -7569,7 +7569,7 @@
       },
       {
         "id": "gsm8k_9b3e9e78",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_9bbe3704",
@@ -7581,7 +7581,7 @@
       },
       {
         "id": "gsm8k_9bc3bd13",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_9bf8c6c2",
@@ -7593,7 +7593,7 @@
       },
       {
         "id": "gsm8k_9c14075d",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_9c3e1462",
@@ -7637,7 +7637,7 @@
       },
       {
         "id": "gsm8k_9e682b78",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_9f12ad97",
@@ -7665,7 +7665,7 @@
       },
       {
         "id": "gsm8k_a0172f2d",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_a031dcd8",
@@ -7681,11 +7681,11 @@
       },
       {
         "id": "gsm8k_a136a35f",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_a13d7d66",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_a157c227",
@@ -7741,7 +7741,7 @@
       },
       {
         "id": "gsm8k_a4aff081",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_a5286da6",
@@ -7765,7 +7765,7 @@
       },
       {
         "id": "gsm8k_a63298e0",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_a633d8cd",
@@ -7817,7 +7817,7 @@
       },
       {
         "id": "gsm8k_a7c7dc23",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_a7f442e0",
@@ -7837,7 +7837,7 @@
       },
       {
         "id": "gsm8k_a84f7ede",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_a85301b7",
@@ -7893,7 +7893,7 @@
       },
       {
         "id": "gsm8k_ab0f580e",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_ab491149",
@@ -7909,11 +7909,11 @@
       },
       {
         "id": "gsm8k_ab82c37f",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_aba73245",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_abab8264",
@@ -7925,7 +7925,7 @@
       },
       {
         "id": "gsm8k_ac0b0ee8",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_ac1dcaa6",
@@ -7945,7 +7945,7 @@
       },
       {
         "id": "gsm8k_ad0b2a81",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_ad7694ac",
@@ -7969,7 +7969,7 @@
       },
       {
         "id": "gsm8k_af9bef9a",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_afd80ed0",
@@ -8161,7 +8161,7 @@
       },
       {
         "id": "gsm8k_b76e1fd7",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_b780ae6d",
@@ -8193,7 +8193,7 @@
       },
       {
         "id": "gsm8k_b875c9c0",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_b89acf34",
@@ -8289,7 +8289,7 @@
       },
       {
         "id": "gsm8k_bc3d854c",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_bc4de188",
@@ -8309,7 +8309,7 @@
       },
       {
         "id": "gsm8k_bd3276f2",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_beb530d4",
@@ -8317,7 +8317,7 @@
       },
       {
         "id": "gsm8k_bebacd2d",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_bec90db9",
@@ -8333,7 +8333,7 @@
       },
       {
         "id": "gsm8k_bfaa6fc5",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_c005e1eb",
@@ -8345,7 +8345,7 @@
       },
       {
         "id": "gsm8k_c0405759",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_c0408c34",
@@ -8393,7 +8393,7 @@
       },
       {
         "id": "gsm8k_c2c5a358",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_c2d84ca6",
@@ -8401,7 +8401,7 @@
       },
       {
         "id": "gsm8k_c319fa95",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_c363f4ba",
@@ -8417,11 +8417,11 @@
       },
       {
         "id": "gsm8k_c41d1a91",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_c428eb4e",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_c45d3fb5",
@@ -8441,7 +8441,7 @@
       },
       {
         "id": "gsm8k_c4fe7859",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_c5573d11",
@@ -8453,7 +8453,7 @@
       },
       {
         "id": "gsm8k_c62bb7bb",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_c660630d",
@@ -8477,7 +8477,7 @@
       },
       {
         "id": "gsm8k_c70bf816",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_c73136a7",
@@ -8493,7 +8493,7 @@
       },
       {
         "id": "gsm8k_c7d3121b",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_c7e0bdd1",
@@ -8549,7 +8549,7 @@
       },
       {
         "id": "gsm8k_c9c57b16",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_c9e36708",
@@ -8569,7 +8569,7 @@
       },
       {
         "id": "gsm8k_cad2f1ab",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_caf91600",
@@ -8589,7 +8589,7 @@
       },
       {
         "id": "gsm8k_cbcc0cb0",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_cc15af5a",
@@ -8645,7 +8645,7 @@
       },
       {
         "id": "gsm8k_ce4c5efc",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_ce7d58a2",
@@ -8709,7 +8709,7 @@
       },
       {
         "id": "gsm8k_d2431601",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_d29904ce",
@@ -8725,11 +8725,11 @@
       },
       {
         "id": "gsm8k_d34b191d",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_d3613aad",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_d3a7948b",
@@ -8765,7 +8765,7 @@
       },
       {
         "id": "gsm8k_d466fbb3",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_d49553a0",
@@ -8797,7 +8797,7 @@
       },
       {
         "id": "gsm8k_d59ca699",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_d6131d82",
@@ -8809,7 +8809,7 @@
       },
       {
         "id": "gsm8k_d61e6626",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_d620c115",
@@ -8825,7 +8825,7 @@
       },
       {
         "id": "gsm8k_d63d6fa6",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_d67ad1d8",
@@ -8865,7 +8865,7 @@
       },
       {
         "id": "gsm8k_d9b39310",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_d9bfe53c",
@@ -8881,7 +8881,7 @@
       },
       {
         "id": "gsm8k_da28b697",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_da3e6efd",
@@ -8913,7 +8913,7 @@
       },
       {
         "id": "gsm8k_db0fc2f0",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_db23d31a",
@@ -8929,7 +8929,7 @@
       },
       {
         "id": "gsm8k_db6eb8a2",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_dc08ed1c",
@@ -8953,7 +8953,7 @@
       },
       {
         "id": "gsm8k_dcc8c389",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_ddad6b51",
@@ -8961,7 +8961,7 @@
       },
       {
         "id": "gsm8k_ddaea83e",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_ddd0b903",
@@ -8985,7 +8985,7 @@
       },
       {
         "id": "gsm8k_dec5e65c",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_df3dd3f7",
@@ -9017,15 +9017,15 @@
       },
       {
         "id": "gsm8k_e08dcb81",
-        "correct": false
-      },
-      {
-        "id": "gsm8k_e1160350",
         "correct": true
       },
       {
-        "id": "gsm8k_e133b5d0",
+        "id": "gsm8k_e1160350",
         "correct": false
+      },
+      {
+        "id": "gsm8k_e133b5d0",
+        "correct": true
       },
       {
         "id": "gsm8k_e14bcae2",
@@ -9045,7 +9045,7 @@
       },
       {
         "id": "gsm8k_e1fc1e2d",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_e2144c4b",
@@ -9053,7 +9053,7 @@
       },
       {
         "id": "gsm8k_e26a4a43",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_e26b80ff",
@@ -9065,7 +9065,7 @@
       },
       {
         "id": "gsm8k_e2c6b198",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_e2ec14d6",
@@ -9105,7 +9105,7 @@
       },
       {
         "id": "gsm8k_e5531f73",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_e5790a05",
@@ -9121,7 +9121,7 @@
       },
       {
         "id": "gsm8k_e6900ec1",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_e738cff7",
@@ -9129,7 +9129,7 @@
       },
       {
         "id": "gsm8k_e73d9d6c",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_e7406e7b",
@@ -9189,7 +9189,7 @@
       },
       {
         "id": "gsm8k_ea2a72f5",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_ea51f809",
@@ -9197,7 +9197,7 @@
       },
       {
         "id": "gsm8k_ea784020",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_eb31bcf0",
@@ -9289,11 +9289,11 @@
       },
       {
         "id": "gsm8k_edf3bc4a",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_ee338381",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_ee7f81c2",
@@ -9341,7 +9341,7 @@
       },
       {
         "id": "gsm8k_f17542b8",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_f1ac1ee8",
@@ -9369,7 +9369,7 @@
       },
       {
         "id": "gsm8k_f21e8b56",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_f249489d",
@@ -9385,7 +9385,7 @@
       },
       {
         "id": "gsm8k_f35bd886",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_f3621455",
@@ -9433,7 +9433,7 @@
       },
       {
         "id": "gsm8k_f5d28e9e",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_f5fb476a",
@@ -9457,7 +9457,7 @@
       },
       {
         "id": "gsm8k_f690fc6c",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_f6f01a75",
@@ -9473,7 +9473,7 @@
       },
       {
         "id": "gsm8k_f7828584",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_f7a04092",
@@ -9481,11 +9481,11 @@
       },
       {
         "id": "gsm8k_f7d718f3",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_f82b5232",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_f8938732",
@@ -9501,7 +9501,7 @@
       },
       {
         "id": "gsm8k_f90cda9d",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_f91041ca",
@@ -9545,7 +9545,7 @@
       },
       {
         "id": "gsm8k_fbbff52f",
-        "correct": true
+        "correct": false
       },
       {
         "id": "gsm8k_fbc33935",
@@ -9561,7 +9561,7 @@
       },
       {
         "id": "gsm8k_fc4e2268",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_fc9be35f",
@@ -9617,7 +9617,7 @@
       },
       {
         "id": "gsm8k_ff69618a",
-        "correct": false
+        "correct": true
       },
       {
         "id": "gsm8k_ff7f7a50",
@@ -9635,8 +9635,8 @@
   },
   "humaneval": {
     "metrics": {
-      "openai/openai_humaneval/accuracy": 0.09146341463414634,
-      "openai/openai_humaneval/stderr": 0.022578813351856353
+      "openai/openai_humaneval/accuracy": 0.006097560975609756,
+      "openai/openai_humaneval/stderr": 0.006097560975609757
     },
     "samples": [
       {
@@ -9781,7 +9781,7 @@
       },
       {
         "id": "HumanEval/13",
-        "correct": true
+        "correct": false
       },
       {
         "id": "HumanEval/130",
@@ -9913,7 +9913,7 @@
       },
       {
         "id": "HumanEval/16",
-        "correct": true
+        "correct": false
       },
       {
         "id": "HumanEval/160",
@@ -9945,7 +9945,7 @@
       },
       {
         "id": "HumanEval/2",
-        "correct": true
+        "correct": false
       },
       {
         "id": "HumanEval/20",
@@ -9953,7 +9953,7 @@
       },
       {
         "id": "HumanEval/21",
-        "correct": false
+        "correct": true
       },
       {
         "id": "HumanEval/22",
@@ -9961,7 +9961,7 @@
       },
       {
         "id": "HumanEval/23",
-        "correct": true
+        "correct": false
       },
       {
         "id": "HumanEval/24",
@@ -9985,7 +9985,7 @@
       },
       {
         "id": "HumanEval/29",
-        "correct": true
+        "correct": false
       },
       {
         "id": "HumanEval/3",
@@ -9993,7 +9993,7 @@
       },
       {
         "id": "HumanEval/30",
-        "correct": true
+        "correct": false
       },
       {
         "id": "HumanEval/31",
@@ -10013,7 +10013,7 @@
       },
       {
         "id": "HumanEval/35",
-        "correct": true
+        "correct": false
       },
       {
         "id": "HumanEval/36",
@@ -10045,7 +10045,7 @@
       },
       {
         "id": "HumanEval/42",
-        "correct": true
+        "correct": false
       },
       {
         "id": "HumanEval/43",
@@ -10057,7 +10057,7 @@
       },
       {
         "id": "HumanEval/45",
-        "correct": true
+        "correct": false
       },
       {
         "id": "HumanEval/46",
@@ -10073,7 +10073,7 @@
       },
       {
         "id": "HumanEval/49",
-        "correct": true
+        "correct": false
       },
       {
         "id": "HumanEval/5",
@@ -10089,11 +10089,11 @@
       },
       {
         "id": "HumanEval/52",
-        "correct": true
+        "correct": false
       },
       {
         "id": "HumanEval/53",
-        "correct": true
+        "correct": false
       },
       {
         "id": "HumanEval/54",
@@ -10101,7 +10101,7 @@
       },
       {
         "id": "HumanEval/55",
-        "correct": true
+        "correct": false
       },
       {
         "id": "HumanEval/56",
@@ -10125,7 +10125,7 @@
       },
       {
         "id": "HumanEval/60",
-        "correct": true
+        "correct": false
       },
       {
         "id": "HumanEval/61",
@@ -10177,7 +10177,7 @@
       },
       {
         "id": "HumanEval/72",
-        "correct": true
+        "correct": false
       },
       {
         "id": "HumanEval/73",
